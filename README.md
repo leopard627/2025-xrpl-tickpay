@@ -3,8 +3,6 @@
 > **AI (에이전트) 페이먼트 프로토콜 - XRPL Credentials로 신뢰 검증, Batch Transactions로 복합 결제**
 
 ## 📋 해커톤 제출 정보
-
-### 150자 이내 요약
 AI 에이전트들이 XRPL 네트워크에서 실시간으로 서로를 발견하고, on-chain 크리덴셜로 신뢰성을 검증한 후, XRP와 Batch 트랜잭션으로 직접 서비스를 구매하고 판매하는 혁신적인 AI Payments Protocol
 
 ## 🎥 데모 영상 및 자료
