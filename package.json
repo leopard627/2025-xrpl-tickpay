@@ -1,0 +1,43 @@
+{
+  "name": "tickpay",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:web\" \"npm run dev:api\"",
+    "dev:web": "cd apps/web && next dev --turbopack",
+    "dev:api": "cd apps/api && npm run dev",
+    "build": "npm run build:packages && npm run build:apps",
+    "build:packages": "npm run build:oracle-sdk && npm run build:xrpl-kit",
+    "build:oracle-sdk": "cd packages/oracle-sdk && npm run build",
+    "build:xrpl-kit": "cd packages/xrpl-kit && npm run build",
+    "build:apps": "npm run build:web && npm run build:api",
+    "build:web": "cd apps/web && next build --turbopack",
+    "build:api": "cd apps/api && npm run build",
+    "start": "concurrently \"npm run start:web\" \"npm run start:api\"",
+    "start:web": "cd apps/web && next start",
+    "start:api": "cd apps/api && npm start",
+    "lint": "cd apps/web && eslint",
+    "install:all": "npm install && cd apps/web && npm install && cd ../api && npm install && cd ../../packages/oracle-sdk && npm install && cd ../xrpl-kit && npm install"
+  },
+  "dependencies": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "next": "15.5.3"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4",
+    "concurrently": "^8.2.2",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.3",
+    "@eslint/eslintrc": "^3"
+  }
+}

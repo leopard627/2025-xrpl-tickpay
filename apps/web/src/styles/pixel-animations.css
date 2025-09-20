@@ -1,0 +1,202 @@
+/* Pixel Game Style Animations for A2A Visualization */
+
+/* Scanline animation for retro CRT effect */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+/* Glow effect for completed transactions */
+.glow-effect {
+  animation: glow-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow-pulse {
+  from {
+    box-shadow: 0 0 5px #2EE6A6, 0 0 10px #2EE6A6, 0 0 15px #2EE6A6;
+  }
+  to {
+    box-shadow: 0 0 10px #2EE6A6, 0 0 20px #2EE6A6, 0 0 30px #2EE6A6, 0 0 40px #2EE6A6;
+  }
+}
+
+/* Pixel-perfect scaling */
+.pixel-perfect {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Transaction beam effect */
+@keyframes transaction-beam {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.transaction-beam {
+  animation: transaction-beam 1s linear;
+}
+
+/* Retro loading bars */
+@keyframes loading-bar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.loading-bar {
+  animation: loading-bar 2s ease-in-out infinite;
+}
+
+/* Pixel explosion effect */
+@keyframes pixel-explosion {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5) rotate(180deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.pixel-explosion {
+  animation: pixel-explosion 1s ease-out forwards;
+}
+
+/* Digital noise effect */
+@keyframes digital-noise {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-2px);
+  }
+  20% {
+    transform: translateX(2px);
+  }
+  30% {
+    transform: translateX(-1px);
+  }
+  40% {
+    transform: translateX(1px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.digital-noise {
+  animation: digital-noise 0.3s ease-in-out;
+}
+
+/* Retro text flicker */
+@keyframes text-flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 1;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+  }
+}
+
+.text-flicker {
+  animation: text-flicker 2s linear infinite;
+}
+
+/* Pixel floating animation */
+@keyframes pixel-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(180deg);
+  }
+}
+
+.pixel-float {
+  animation: pixel-float 3s ease-in-out infinite;
+}
+
+/* Matrix-style data stream */
+@keyframes data-stream {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.data-stream {
+  animation: data-stream 3s linear infinite;
+}
+
+/* Retro button press effect */
+@keyframes button-press {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 0 #1a1a1a;
+  }
+  100% {
+    transform: scale(0.95) translateY(2px);
+    box-shadow: 0 2px 0 #1a1a1a;
+  }
+}
+
+.button-press {
+  animation: button-press 0.1s ease-out;
+}
+
+/* Hologram effect */
+@keyframes hologram {
+  0%, 100% {
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    opacity: 0.8;
+    filter: hue-rotate(90deg);
+  }
+}
+
+.hologram {
+  animation: hologram 2s ease-in-out infinite;
+}
