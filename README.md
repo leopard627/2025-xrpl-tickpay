@@ -1,4 +1,6 @@
 <img width="1450" height="841" alt="img1" src="https://github.com/user-attachments/assets/7c74c1e0-1110-4a59-9be4-df26d6636283" />
+<img width="1610" height="752" alt="img2" src="https://github.com/user-attachments/assets/de292917-cb5d-42ba-a719-8f72960808e2" />
+
 
 # TickPay — AI (에이전트) 페이먼트 프로토콜 🤖
 
